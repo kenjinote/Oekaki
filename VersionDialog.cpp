@@ -6,12 +6,11 @@ VersionDialog::VersionDialog()
 {
 }
 
-
 VersionDialog::~VersionDialog()
 {
 }
 
-INT_PTR VersionDialog::DialogProc(HWND hDlg, unsigned msg, WPARAM wParam, LPARAM lParam)
+INT_PTR VersionDialog::DialogProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam)
 {
 	switch (msg)
 	{

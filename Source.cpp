@@ -59,7 +59,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR pCmdLine, int 
 	RegisterClass(&wndclass);
 	HWND hWnd = CreateWindow(
 		szClassName,
-		TEXT("Window"),
+		TEXT("お絵かき"),
 		WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN,
 		CW_USEDEFAULT,
 		0,

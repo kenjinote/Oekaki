@@ -160,7 +160,10 @@
   <ItemGroup>
     <ClCompile Include="Canvas.cpp" />
     <ClCompile Include="Control.cpp" />
+    <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="Image.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="ShadowEffect.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="VersionDialog.cpp" />
@@ -169,8 +172,11 @@
     <ClInclude Include="Canvas.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Control.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="Image.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="ShadowEffect.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="VersionDialog.h" />
   </ItemGroup>

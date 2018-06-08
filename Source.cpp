@@ -1,6 +1,8 @@
 ﻿#pragma comment(linker,"\"/manifestdependency:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 
 #include <windows.h>
+#include "VersionDialog.h"
+#include "resource.h"
 
 TCHAR szClassName[] = TEXT("Window");
 
@@ -23,12 +25,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		MoveWindow(hEdit, 10, 50, LOWORD(lParam) - 20, HIWORD(lParam) - 60, TRUE);
 		break;
 	case WM_COMMAND:
-		if (LOWORD(wParam) == IDOK)
+		switch (LOWORD(wParam))
 		{
-			SetWindowText(hEdit, 0);
-			TCHAR szText[1024];
-			wsprintf(szText, TEXT("%d"), GetTickCount());
-			SendMessage(hEdit, EM_REPLACESEL, 0, (LPARAM)szText);
+		case ID_40001:
+			{
+				VersionDialog dlg;
+				dlg.ShowDialog(hWnd);
+			}
+			break;
+		case ID_40002:
+			SendMessage(hWnd, WM_CLOSE, 0, 0);
+			break;
 		}
 		break;
 	case WM_DESTROY:
@@ -53,7 +60,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR pCmdLine, int 
 		0,
 		LoadCursor(0,IDC_ARROW),
 		(HBRUSH)(COLOR_WINDOW + 1),
-		0,
+		MAKEINTRESOURCE(IDR_MENU1),
 		szClassName
 	};
 	RegisterClass(&wndclass);

@@ -163,13 +163,19 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Text.cpp" />
+    <ClCompile Include="VersionDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Canvas.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Control.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Text.h" />
+    <ClInclude Include="VersionDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Oekaki.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

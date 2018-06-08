@@ -5,7 +5,5 @@ public:
 	Control();
 	~Control();
 
-	HWND m_hWnd;
-
 };
 
